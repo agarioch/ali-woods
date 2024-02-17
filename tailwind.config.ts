@@ -39,6 +39,16 @@ const config: Config = {
         dark: '#2C1348'
       }    
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "16px",
+        sm: "24px",
+        md: "32px",
+        lg: "48px",
+        xl: "64px"
+      },
+    },
     fontFamily: {
       heading: ["futura-pt-bold", "serif", "sans-serif"],
       body: ["futura-pt", "serif", "sans-serif"],
