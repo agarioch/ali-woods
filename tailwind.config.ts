@@ -7,13 +7,42 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+    colors: {
+      gray: {
+        light: '#636363',
+        DEFAULT: '#434343',
+        dark: '#0A0A0A'
       },
+      white: {
+        light: '#F8F8F8',
+        DEFAULT: '#CACACA',
+        dark: '#9E9E9E'
+      },
+      red: {
+        light: '#EA5285',
+        DEFAULT: '#E12A67',
+        dark: '#A71646'
+      },
+      green: {
+        light: '#51B8B0',
+        DEFAULT: '#27A097',
+        dark: '#12776F'
+      },
+      yellow: {
+        light: '#F6E55B',
+        DEFAULT: '#F3DD2E',
+        dark: '#AD9A00'
+      },
+      purple: {
+        light: '#482F64',
+        DEFAULT: '#3D2459',
+        dark: '#2C1348'
+      }    
     },
+    fontFamily: {
+      heading: ["futura-pt-bold", "serif", "sans-serif"],
+      body: ["futura-pt", "serif", "sans-serif"],
+    }
   },
   plugins: [],
 };
