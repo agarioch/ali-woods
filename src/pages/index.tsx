@@ -1,7 +1,11 @@
+import Gigs from "@/components/gigs";
+import Hero from "@/components/hero";
+
 export default function Home() {
   return (
     <>
-      <p className="text-lg">Home page placeholder</p>
+      <Hero />
+      <Gigs />
     </>
   );
 }
