@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": "^20.11.1",
-    "npm": "^10.2.4"
+    "node": ">18",
+    "npm": ">10"
   },
   "dependencies": {
     "clsx": "^2.1.0",
