@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LinkButton } from "../common";
 
 const About = () => {
   return (
@@ -13,9 +14,7 @@ const About = () => {
           on the modern ‘lad’ culture which often features in his comedy. 
           Ali is that wonderful blend of comedy with a heart, speaking on topics such as football, 
           the environment, and many social causes close to his heart.`}</p>
-          <button className="bg-gray-dark px-5 py-3 font-bold shadow-md">
-            Learn More
-          </button>
+          <LinkButton href="#">Learn More</LinkButton>
         </div>
         <div className="aspect-square max-w-96 flex-1 bg-yellow lg:max-w-lg">
           <Image
