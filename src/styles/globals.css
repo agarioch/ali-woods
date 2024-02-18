@@ -38,8 +38,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.heading
+{
   @apply font-heading font-bold uppercase italic text-yellow;
+}
+
+th {
+  text-align: start;
 }
 
 @layer utilities {

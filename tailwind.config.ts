@@ -50,13 +50,17 @@ const config: Config = {
       },
     },
     fontFamily: {
-      heading: ["futura-pt-bold", "serif", "sans-serif"],
-      body: ["futura-pt", "serif", "sans-serif"],
+      heading: ["futura-pt-bold", "sans-serif"],
+      body: ["futura-pt", "sans-serif"],
     },
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/images/hero-bg.png')",
       },
+      fontSize: {
+        "heading": "28px",
+        "copy": "20px"
+      }
     },
   },
   plugins: [],
