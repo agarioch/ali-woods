@@ -1,6 +1,6 @@
 const GigsNext = () => {
   return (
-    <div className="bg-white-light py-3 text-gray-dark">
+    <div className="text-copy bg-white-light py-3 text-gray-dark">
       <div className="container flex justify-between">
         <div>
           <h3 className="inline-block text-red">Next show:</h3>
