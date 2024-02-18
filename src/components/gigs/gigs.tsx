@@ -67,20 +67,27 @@ const Gigs = () => {
               hilarity, complete with venue information and ticket availability.`}
             </p>
           </div>
-          <div className="bg-purple-light px-16 py-12">
-            <table className="text-copy w-full table-auto border-collapse">
+          <div className="overflow-x-auto bg-purple-light px-4 py-12 sm:px-16">
+            <table className="sm:text-copy w-full table-auto border-collapse">
               <thead className="heading text-heading">
                 <tr>
-                  <th>Location</th>
-                  <th>Date</th>
-                  <th>Tickets</th>
+                  <th className="pr-4">Location</th>
+                  <th className="hidden pr-4 sm:block">Date</th>
+                  <th className="pr-4">Tickets</th>
                 </tr>
               </thead>
               <tbody>
                 {upcomingGigs.map((gig) => (
                   <tr key={gig.location}>
-                    <td className="py-5 pr-4 font-bold">{gig.location}</td>
-                    <td className="py-5 pr-4">{formatDateString(gig.date)}</td>
+                    <td className="py-5 pr-4 font-bold">
+                      {gig.location}
+                      <p className="text-sm font-normal text-white sm:hidden">
+                        {formatDateString(gig.date)}
+                      </p>
+                    </td>
+                    <td className="hidden py-5 pr-4 sm:block">
+                      {formatDateString(gig.date)}
+                    </td>
                     <td
                       className={clsx(
                         "py-5 pr-4",

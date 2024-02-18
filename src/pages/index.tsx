@@ -1,3 +1,4 @@
+import About from "@/components/about";
 import Gigs from "@/components/gigs";
 import Hero from "@/components/hero";
 import Newsletter from "@/components/newsletter";
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Gigs />
       <Newsletter />
+      <About />
     </>
   );
 }

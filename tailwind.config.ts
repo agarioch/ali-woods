@@ -42,11 +42,11 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "16px",
-        sm: "24px",
+        DEFAULT: "24px",
+        sm: "32px",
         md: "32px",
         lg: "48px",
-        xl: "64px",
+        xl: "112px",
       },
     },
     fontFamily: {

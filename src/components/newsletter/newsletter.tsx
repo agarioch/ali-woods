@@ -13,11 +13,11 @@ const Newsletter = () => {
             height={1224}
           />
         </div>
-        <div className="text-copy flex-1 px-16 py-12">
+        <div className="text-copy flex-1 px-4 py-12 sm:px-6 md:px-8 lg:px-12 xl:px-28">
           <h2 className="text-heading text-white-light">
             Never miss a <span className="text-yellow">punchline</span>
           </h2>
-          <p className="py-8">
+          <p className="my-8">
             {`Sign up for Ali's newsletter to receive exclusive updates, 
           behind-the-scenes anecdotes, and early access to ticket sales. 
           Be the first to know about upcoming gigs, special events, and all things Ali.`}
