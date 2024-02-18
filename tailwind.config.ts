@@ -52,6 +52,11 @@ const config: Config = {
     fontFamily: {
       heading: ["futura-pt-bold", "serif", "sans-serif"],
       body: ["futura-pt", "serif", "sans-serif"],
+    },
+    extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/images/hero-bg.png')",
+      },
     }
   },
   plugins: [],
