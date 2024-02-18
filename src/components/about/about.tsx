@@ -20,8 +20,8 @@ const About = () => {
           <Image
             src="/images/ali-woods-walk.png"
             alt="Ali Woods"
-            width={1504}
-            height={1449}
+            width={752} // 1504 / 2 = 752
+            height={724} // 1449 / 2 = 724.5
             className="-mb-[10%] -translate-x-[15%] -translate-y-[10%]"
           />
         </div>

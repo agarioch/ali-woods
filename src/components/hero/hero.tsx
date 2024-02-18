@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroSocials from "./hero.socials";
 
+// TODO: add nextgen image formats to improve loading speed
 const Hero = () => {
   return (
     <div className="h-100 bg-green-dark bg-hero-pattern bg-cover">
@@ -9,6 +10,7 @@ const Hero = () => {
           <Image
             src="/images/hero-ali-woods.png"
             alt="Ali Woods"
+            priority
             width={1358}
             height={1224}
             className="pointer-events-none max-w-full md:-mb-12 md:max-w-xl md:-translate-y-12 lg:max-w-3xl xl:max-w-4xl"

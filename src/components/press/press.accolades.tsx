@@ -41,8 +41,8 @@ const Accolades = () => {
             <Image
               src="/images/ali-woods-suit.png"
               alt="Ali Woods wearing a suit"
-              height={1002}
-              width={1003}
+              height={672}
+              width={671}
             />
           </div>
         </div>

@@ -9,8 +9,8 @@ const Newsletter = () => {
           <Image
             src="/images/ali-woods-splits.png"
             alt="Ali Woods"
-            width={4096}
-            height={1224}
+            width={528}
+            height={485}
           />
         </div>
         <div className="text-copy flex-1 px-4 py-12 sm:px-6 md:px-8 lg:px-12 xl:px-28">
