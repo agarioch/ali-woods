@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <link rel="stylesheet" href="https://use.typekit.net/ork1mfl.css"></link>
       <Head />
-      <body className="antialiased font-body">
+      <body className="font-body antialiased">
         <Main />
         <NextScript />
       </body>

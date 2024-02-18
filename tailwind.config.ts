@@ -9,35 +9,35 @@ const config: Config = {
   theme: {
     colors: {
       gray: {
-        light: '#636363',
-        DEFAULT: '#434343',
-        dark: '#0A0A0A'
+        light: "#636363",
+        DEFAULT: "#434343",
+        dark: "#0A0A0A",
       },
       white: {
-        light: '#F8F8F8',
-        DEFAULT: '#CACACA',
-        dark: '#9E9E9E'
+        light: "#F8F8F8",
+        DEFAULT: "#CACACA",
+        dark: "#9E9E9E",
       },
       red: {
-        light: '#EA5285',
-        DEFAULT: '#E12A67',
-        dark: '#A71646'
+        light: "#EA5285",
+        DEFAULT: "#E12A67",
+        dark: "#A71646",
       },
       green: {
-        light: '#51B8B0',
-        DEFAULT: '#27A097',
-        dark: '#12776F'
+        light: "#51B8B0",
+        DEFAULT: "#27A097",
+        dark: "#12776F",
       },
       yellow: {
-        light: '#F6E55B',
-        DEFAULT: '#F3DD2E',
-        dark: '#AD9A00'
+        light: "#F6E55B",
+        DEFAULT: "#F3DD2E",
+        dark: "#AD9A00",
       },
       purple: {
-        light: '#482F64',
-        DEFAULT: '#3D2459',
-        dark: '#2C1348'
-      }    
+        light: "#482F64",
+        DEFAULT: "#3D2459",
+        dark: "#2C1348",
+      },
     },
     container: {
       center: true,
@@ -46,7 +46,7 @@ const config: Config = {
         sm: "24px",
         md: "32px",
         lg: "48px",
-        xl: "64px"
+        xl: "64px",
       },
     },
     fontFamily: {
@@ -57,7 +57,7 @@ const config: Config = {
       backgroundImage: {
         "hero-pattern": "url('/images/hero-bg.png')",
       },
-    }
+    },
   },
   plugins: [],
 };

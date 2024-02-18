@@ -1,2 +1,2 @@
-export * from './gigs'
-export { default } from './gigs'
+export * from "./gigs";
+export { default } from "./gigs";

@@ -3,28 +3,28 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="bg-green-dark h-100 bg-hero-pattern bg-cover">
+    <div className="h-100 bg-green-dark bg-hero-pattern bg-cover">
       <section className="container flex justify-between">
-        <div className="relative sm:-ml-16 max-h-screen">
+        <div className="relative max-h-screen sm:-ml-16">
           <Image
             src="/images/hero-ali-woods.png"
             alt="Ali Woods"
             width={1358}
             height={1224}
-            className="md:-translate-y-12 md:-mb-12 max-w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl pointer-events-none"
+            className="pointer-events-none max-w-full md:-mb-12 md:max-w-xl md:-translate-y-12 lg:max-w-3xl xl:max-w-4xl"
           />
-          <div className="hidden md:block absolute font-heading top-1/4 left-3/4 ml-[5vw] w-max">
-            <p className="text-3xl lg:text-4xl xl:text-5xl italic">
+          <div className="absolute left-3/4 top-1/4 ml-[5vw] hidden w-max font-heading md:block">
+            <p className="text-3xl italic lg:text-4xl xl:text-5xl">
               {"In a world of wannabes,"}
               <br />
               {"Woods is the real deal"}
             </p>
-            <p className="text-yellow-light lg:text-xl mt-4">
+            <p className="mt-4 text-yellow-light lg:text-xl">
               Evening Standard
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-24 self-end text-end mb-12 min-w-6 sm:min-w-8">
+        <div className="mb-12 flex min-w-6 flex-col gap-8 self-end text-end sm:min-w-8 md:flex-row lg:gap-24">
           <Link href="https://www.instagram.com/aliwoodsgigs/" target="_blank">
             <Image
               src="/images/instagram.svg"

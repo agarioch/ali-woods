@@ -1,9 +1,9 @@
 const LayoutFooter = () => {
   return (
     <footer className="bg-gray-dark text-white-light">
-      <div className="container py-16 grid grid-cols-1 sm:grid-cols-2 gap-12">
+      <div className="container grid grid-cols-1 gap-12 py-16 sm:grid-cols-2">
         {/* Name & Links */}
-        <div className="flex flex-col justify-between gap-8 h-full">
+        <div className="flex h-full flex-col justify-between gap-8">
           <h2 className="text-2xl text-red">Ali Woods</h2>
           <p>Live Shows</p>
           <p>Videos</p>
@@ -11,7 +11,7 @@ const LayoutFooter = () => {
         </div>
         {/* Contact */}
         <div className="flex flex-col justify-between gap-8">
-          <div className="flex sm:justify-end gap-16 text-red ">
+          <div className="flex gap-16 text-red sm:justify-end ">
             Socials Here
           </div>
           <div className="sm:text-end">
