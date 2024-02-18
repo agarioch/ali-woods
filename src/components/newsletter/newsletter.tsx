@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Newsletter = () => {
   return (
-    <div className="flex">
+    <section className="flex" id="newsletter">
       <div className="flex-grow bg-red-light" />
       <div className="container flex flex-col items-center px-0 sm:flex-row">
         <div className="flex h-full flex-1 items-center bg-red-light">
@@ -36,7 +36,7 @@ const Newsletter = () => {
         </div>
       </div>
       <div className="bg-dray-dark flex-grow" />
-    </div>
+    </section>
   );
 };
 

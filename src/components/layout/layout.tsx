@@ -8,8 +8,13 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col">
+      <a href="#main" className="sr-only focus:not-sr-only focus:absolute">
+        Skip to main content
+      </a>
       <LayoutHeading />
-      <main className="grow bg-gray-dark">{children}</main>
+      <main className="grow bg-gray-dark" id="main">
+        {children}
+      </main>
       <LayoutFooter />
     </div>
   );

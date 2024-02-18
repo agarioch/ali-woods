@@ -55,7 +55,7 @@ function formatTicketLink(tickets: string, link?: string) {
 
 const Gigs = () => {
   return (
-    <section>
+    <section id="gigs">
       <GigsNext />
       <div className="bg-purple">
         <div className="container py-12">
