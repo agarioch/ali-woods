@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LinkAnchor } from "../common";
 
 // TODO: add link component with some styles
 
@@ -58,9 +59,9 @@ const Accolades = () => {
           </p>
           <p>
             His online comedy sketches under the tag{" "}
-            <a href="https://www.instagram.com/aliwoodsgigs/" target="_blank">
+            <LinkAnchor href="https://www.instagram.com/aliwoodsgigs/">
               @aliwoodsgigs
-            </a>{" "}
+            </LinkAnchor>{" "}
             have gained millions of views and likes, and featured on LadBible
             and Buzzfeed UK. In 2022, he supported Russell Kane and Axel Blake
             on tour.
@@ -69,9 +70,9 @@ const Accolades = () => {
             Ali sold out Leicester Square theatre earlier this year and has put
             his first ever comedy special on Youtube, already surpassing 15k
             views! You can watch his hilarious hour{" "}
-            <a href="" target="_blank">
+            <LinkAnchor href="https://www.youtube.com/watch?v=R4e9T2oAU0g">
               here
-            </a>
+            </LinkAnchor>
             .
           </p>
         </div>

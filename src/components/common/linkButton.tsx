@@ -7,7 +7,7 @@ type LinkButtonProps = ButtonProps & {
 
 const LinkButton = ({ href, children, ...props }: LinkButtonProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <Button {...props}>{children}</Button>
     </Link>
   );
