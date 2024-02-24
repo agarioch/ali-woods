@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Appearances = () => {
   return (
-    <div className="text-copy overflow-x-scroll bg-white-light py-3 text-gray-dark">
-      <div className="container flex items-center justify-between gap-4">
+    <div className="overflow-x-auto bg-white-light py-3 text-copy text-gray-dark">
+      <div className="container flex items-center justify-between gap-8 [&>img]:shrink-0">
         <Image
           src="/images/press/guardian-logo.png"
           alt="The Guardian"

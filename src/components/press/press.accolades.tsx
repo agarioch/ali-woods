@@ -5,10 +5,16 @@ import Image from "next/image";
 const Accolades = () => {
   return (
     <div className="bg-purple">
-      <div className="text-copy container flex items-center gap-28 py-12">
-        <div className="flex-1">
-          <div className="relative p-10">
-            <div className="absolute right-[20%] top-[65%] w-[80%] bg-gray-dark pb-8 pl-16 pr-9 pt-16">
+      <div className="container flex flex-col-reverse items-center gap-6 py-12 text-copy lg:flex-row lg:gap-20 lg:pb-28 xl:gap-28">
+        <div className="flex-1 lg:self-start xl:self-center">
+          <div className="relative md:px-20 lg:p-0 xl:p-10">
+            <Image
+              src="/images/ali-woods-suit.png"
+              alt="Ali Woods wearing a suit"
+              height={672}
+              width={671}
+            />
+            <div className="top-[65%] bg-gray-dark p-6 lg:absolute lg:right-[10%] lg:w-[110%] lg:pb-6 lg:pl-16 lg:pr-4 lg:pt-16 xl:right-[20%] xl:w-[80%]">
               <div className="relative">
                 <Image
                   src="/images/press/evening-standard-logo.png"
@@ -32,22 +38,16 @@ const Accolades = () => {
                   </svg>
                 </div>
               </div>
-              <p className="my-4 text-balance">
+              <p className="my-3 text-balance">
                 {`His riffs about James Bond, erectile dysfunction and his Scottish mother were accessible yet distinctive.
                 In a world of wannabes, Woods is the real deal.`}
               </p>
               <p className="text-base text-yellow">{`John Smith, Tea Marker at Men's Health`}</p>
             </div>
-            <Image
-              src="/images/ali-woods-suit.png"
-              alt="Ali Woods wearing a suit"
-              height={672}
-              width={671}
-            />
           </div>
         </div>
         <div className="copy max-w-md flex-1">
-          <h2 className="text-heading mb-6 text-white-light">
+          <h2 className="mb-6 text-heading text-white-light">
             A new and original
             <br />
             <span className="text-yellow">voice in comedy</span>.
