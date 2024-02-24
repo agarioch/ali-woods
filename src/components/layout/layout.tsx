@@ -1,4 +1,4 @@
-import LayoutHeading from "./layout.heading";
+import LayoutHeader from "./layout.header";
 import LayoutFooter from "./layout.footer";
 
 type LayoutProps = {
@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute">
         Skip to main content
       </a>
-      <LayoutHeading />
+      <LayoutHeader />
       <main className="grow bg-gray-dark" id="main">
         {children}
       </main>
