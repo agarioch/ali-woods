@@ -1,12 +1,27 @@
 import Image from "next/image";
 import HeroSocials from "./hero.socials";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 // TODO: add nextgen image formats to improve loading speed
 const Hero = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+  const aliTranslate = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
   return (
-    <div className="h-100 bg-green-dark bg-hero-pattern bg-cover">
+    <div
+      className="h-100 bg-green-dark bg-hero-pattern bg-cover"
+      ref={containerRef}
+    >
       <section className="container flex justify-between">
-        <div className="relative max-h-screen sm:-ml-16">
+        <motion.div
+          className="relative max-h-screen sm:-ml-16"
+          style={{ translateY: aliTranslate }}
+        >
           <Image
             src="/images/hero-ali-woods.png"
             alt="Ali Woods"
@@ -25,7 +40,7 @@ const Hero = () => {
               Evening Standard
             </p>
           </div>
-        </div>
+        </motion.div>
         <HeroSocials />
       </section>
     </div>

@@ -1,9 +1,24 @@
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { LinkButton } from "../common";
+import { useRef } from "react";
 
 const About = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "center center"],
+  });
+
+  const squareBackground = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["#F6E55B", "#F3DD2E"],
+  );
+  const aliTranslate = useTransform(scrollYProgress, [0, 1], [50, 0]);
+
   return (
-    <div className="bg-green">
+    <div className="bg-green" ref={containerRef}>
       <div className="container flex flex-col-reverse items-center gap-12 py-16 md:gap-28 lg:flex-row">
         <div className="flex-1 text-copy">
           <h2 className="text-heading text-white-light">About</h2>
@@ -18,15 +33,22 @@ const About = () => {
             Learn More
           </LinkButton>
         </div>
-        <div className="aspect-square max-w-96 flex-1 bg-yellow lg:max-w-lg">
-          <Image
-            src="/images/ali-woods-walk.png"
-            alt="Ali Woods"
-            width={752} // 1504 / 2 = 752
-            height={724} // 1449 / 2 = 724.5
-            className="-mb-[10%] -translate-x-[15%] -translate-y-[10%]"
-          />
-        </div>
+        <motion.div
+          className="aspect-square max-w-96 flex-1 lg:max-w-lg"
+          style={{
+            backgroundColor: squareBackground,
+          }}
+        >
+          <motion.div style={{ translateY: aliTranslate }}>
+            <Image
+              src="/images/ali-woods-walk.png"
+              alt="Ali Woods"
+              width={752} // 1504 / 2 = 752
+              height={724} // 1449 / 2 = 724.5
+              className="-mb-[10%] -translate-x-[15%] -translate-y-[10%]"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
