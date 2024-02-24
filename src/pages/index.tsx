@@ -4,6 +4,7 @@ import Gigs from "@/components/gigs";
 import Hero from "@/components/hero";
 import Newsletter from "@/components/newsletter";
 import Press from "@/components/press";
+import Videos from "@/components/videos";
 
 const pageDescription =
   "Ali Woods is an award winning stand-up comedian, podcaster, content-creator and ginger. View upcoming gigs, videos and exclusive content.";
@@ -37,6 +38,7 @@ export default function Home() {
       <Newsletter />
       <About />
       <Press />
+      <Videos />
     </>
   );
 }

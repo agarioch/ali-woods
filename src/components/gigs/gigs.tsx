@@ -61,14 +61,14 @@ const Gigs = () => {
         <div className="container py-12">
           <div className="bg-purple-dark px-16 py-12">
             <h2 className="text-heading">2024 Gigs</h2>
-            <p className="text-copy max-w-prose pt-8">
+            <p className="max-w-prose pt-8 text-copy">
               {`Stay in the loop with Ali's upcoming performances. Check out the
               list below for details on where you can catch the next wave of
               hilarity, complete with venue information and ticket availability.`}
             </p>
           </div>
           <div className="overflow-x-auto bg-purple-light px-4 py-12 sm:px-16">
-            <table className="sm:text-copy w-full table-auto border-collapse">
+            <table className="w-full table-auto border-collapse sm:text-copy">
               <thead className="heading text-heading">
                 <tr>
                   <th className="pr-4">Location</th>
@@ -93,6 +93,8 @@ const Gigs = () => {
                         "py-5 pr-4",
                         gig.tickets === "Sold out" &&
                           "font-bold uppercase text-red",
+                        gig.tickets === "Buy now" &&
+                          "font-bold uppercase text-green-light",
                       )}
                     >
                       {formatTicketLink(gig.tickets, gig.tickets_link)}

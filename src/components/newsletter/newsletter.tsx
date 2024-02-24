@@ -13,7 +13,7 @@ const Newsletter = () => {
             height={485}
           />
         </div>
-        <div className="text-copy flex-1 px-4 py-12 sm:px-6 md:px-8 lg:px-12 xl:px-28">
+        <div className="flex-1 px-4 py-12 text-copy sm:px-6 md:px-8 lg:px-12 xl:px-28">
           <h2 className="text-heading text-white-light">
             Never miss a <span className="text-yellow">punchline</span>
           </h2>
@@ -27,7 +27,7 @@ const Newsletter = () => {
               type="email"
               autoComplete="email"
               placeholder="Email"
-              className="grow bg-white-light px-5 py-3 text-gray-dark"
+              className="grow rounded-none bg-white-light px-5 py-3 text-gray-dark"
             />
             <button className="shrink-0 bg-green px-5 py-3 text-yellow">
               Sign up
