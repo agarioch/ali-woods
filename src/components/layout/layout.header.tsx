@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HTMLAttributes } from "react";
+import { LinkAnchor } from "../common";
 
 const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
@@ -9,9 +10,15 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
           <h1 className="text-4xl">Ali Woods</h1>
         </Link>
         <div className="flex min-w-fit max-w-xl basis-1/3 justify-between gap-8 text-xl sm:gap-16 xl:text-2xl">
-          <Link href="/#gigs">Live Shows</Link>
-          <Link href="/#newsletter">Newsletter</Link>
-          <Link href="/#videos">Videos</Link>
+          <LinkAnchor hasUnderline={false} href="/#gigs">
+            Live Shows
+          </LinkAnchor>
+          <LinkAnchor hasUnderline={false} href="/#newsletter">
+            Newsletter
+          </LinkAnchor>
+          <LinkAnchor hasUnderline={false} href="/#videos">
+            Videos
+          </LinkAnchor>
         </div>
         {props.children}
       </nav>

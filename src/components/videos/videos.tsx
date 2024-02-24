@@ -7,7 +7,7 @@ const Videos = () => {
   const [id, setId] = useState(videoLinks[0].id);
   const [title, setTitle] = useState("Ali Woods Stand Up");
   return (
-    <section className="bg-yellow py-16">
+    <section className="bg-yellow py-16" id="videos">
       <div className="container">
         <h2 className="text-heading text-gray-dark">Videos</h2>
         <div className="mt-10 flex flex-col items-start gap-3 xl:flex-row">

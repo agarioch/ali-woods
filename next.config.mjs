@@ -13,6 +13,11 @@ const nextConfig = {
         destination: "/#videos",
         permanent: true,
       },
+      {
+        source: "/podcast",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,15 +1,25 @@
+import clsx from "clsx";
 import Link from "next/link";
 
 type LinkAnchorProps = {
   href: string;
   children: React.ReactNode;
+  hasUnderline?: boolean;
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-const LinkAnchor = ({ href, children, ...props }: LinkAnchorProps) => {
+const LinkAnchor = ({
+  href,
+  children,
+  hasUnderline = true,
+  ...props
+}: LinkAnchorProps) => {
   return (
     <Link
       href={href}
-      className="underline decoration-white-light decoration-2 hover:text-yellow-light"
+      className={clsx(
+        "decoration-white-light decoration-2 transition-colors hover:text-yellow-light",
+        hasUnderline && "underline",
+      )}
       target="_blank"
       {...props}
     >

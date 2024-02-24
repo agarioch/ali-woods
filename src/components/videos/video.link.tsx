@@ -27,7 +27,7 @@ const VideoLink = ({
       <div className="flex items-center justify-between gap-4 border-b border-b-yellow-dark px-5 py-4">
         <div>
           <p className="font-bold uppercase">{title}</p>
-          <p className="line-clamp-1">{desc}</p>
+          <p className="line-clamp-2 sm:line-clamp-1">{desc}</p>
         </div>
         <div
           className={clsx(

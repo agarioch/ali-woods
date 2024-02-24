@@ -1,18 +1,24 @@
+import clsx from "clsx";
 import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
+import { HTMLAttributes, ReactElement } from "react";
 
 type LinkIconProps = {
   href: string;
-} & ImageProps;
+} & HTMLAttributes<HTMLAnchorElement>;
 
-const LinkIcon = ({ href, alt, src, ...props }: LinkIconProps) => {
+const LinkIcon = ({ href, children, className, ...props }: LinkIconProps) => {
   return (
     <Link
       href={href}
       target="_blank"
-      className="opacity-80 transition-opacity hover:opacity-100"
+      className={clsx(
+        "opacity-80 transition-opacity hover:opacity-100",
+        className,
+      )}
+      {...props}
     >
-      <Image alt={alt} src={src} {...props} />
+      {children}
     </Link>
   );
 };
