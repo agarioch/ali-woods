@@ -16,7 +16,7 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
     <header
       className={clsx(
         "bg-gray-dark py-3",
-        isScrolled ? "sticky top-0 z-10" : "",
+        isScrolled ? "sticky top-0 z-50" : "",
       )}
       {...props}
     >

@@ -1,45 +1,8 @@
 import { format } from "date-fns";
-import GigsNext from "./gigs.next";
 import Link from "next/link";
 import clsx from "clsx";
-
-type Gig = {
-  location: string;
-  date?: Date;
-  tickets: "Sold out" | "Buy now" | "Coming Soon";
-  tickets_link?: string;
-};
-
-const upcomingGigs: Gig[] = [
-  {
-    location: "The Chuckle Cellar",
-    date: new Date("2024-01-01"),
-    tickets: "Sold out",
-    tickets_link: "https://example.com",
-  },
-  {
-    location: "The Laugh Lounge",
-    date: new Date("2024-02-01"),
-    tickets: "Buy now",
-    tickets_link: "https://example.com",
-  },
-  {
-    location: "The Comedy Cave",
-    tickets: "Coming Soon",
-  },
-  {
-    location: "The Chuckle Cellar",
-    date: new Date("2024-04-01"),
-    tickets: "Buy now",
-    tickets_link: "https://example.com",
-  },
-  {
-    location: "The Laugh Lounge",
-    date: new Date("2024-05-01"),
-    tickets: "Buy now",
-    tickets_link: "https://example.com",
-  },
-];
+import upcomingGigs from "./gigs.list";
+import GigsNext from "./gigs.next";
 
 function formatDateString(date: Date | undefined) {
   return date === undefined ? "TBA" : format(date, "MM/dd/yy");
@@ -78,7 +41,7 @@ const Gigs = () => {
               </thead>
               <tbody>
                 {upcomingGigs.map((gig) => (
-                  <tr key={gig.location}>
+                  <tr key={gig.id}>
                     <td className="py-5 pr-4 font-bold">
                       {gig.location}
                       <p className="text-sm font-normal text-white sm:hidden">
