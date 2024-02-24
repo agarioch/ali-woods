@@ -1,10 +1,25 @@
+import { type HTMLAttributes, useState } from "react";
 import Link from "next/link";
-import { HTMLAttributes } from "react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import clsx from "clsx";
 import { LinkAnchor } from "../common";
 
 const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
+  const { scrollY } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+    setIsScrolled(y > 0);
+  });
+
   return (
-    <header className="bg-gray-dark py-3" {...props}>
+    <header
+      className={clsx(
+        "bg-gray-dark py-3",
+        isScrolled ? "sticky top-0 z-10" : "",
+      )}
+      {...props}
+    >
       <nav className="container flex flex-wrap items-baseline justify-between gap-3">
         <Link href="/">
           <h1 className="text-4xl">Ali Woods</h1>

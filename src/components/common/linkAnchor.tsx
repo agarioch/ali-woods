@@ -20,7 +20,7 @@ const LinkAnchor = ({
         "decoration-white-light decoration-2 transition-colors hover:text-yellow-light",
         hasUnderline && "underline",
       )}
-      target="_blank"
+      target={href.startsWith("http") ? "_blank" : undefined}
       {...props}
     >
       {children}
