@@ -69,9 +69,9 @@ const Accolades = () => {
           <p>
             Ali sold out Leicester Square theatre earlier this year and has put
             his first ever comedy special on Youtube, already surpassing 15k
-            views! You can watch his hilarious hour{" "}
+            views! You can
             <LinkAnchor href="https://www.youtube.com/watch?v=R4e9T2oAU0g">
-              here
+              watch his hilarious hour here
             </LinkAnchor>
             .
           </p>
