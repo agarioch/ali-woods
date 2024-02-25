@@ -1,25 +1,57 @@
 import { format } from "date-fns";
 import Link from "next/link";
 import clsx from "clsx";
-import upcomingGigs from "./gigs.list";
 import GigsNext from "./gigs.next";
+import { Gig, GigStatus } from "@/types";
+import { useEffect, useState } from "react";
 
 function formatDateString(date: Date | undefined) {
   return date === undefined ? "TBA" : format(date, "MM/dd/yy");
 }
 
-function formatTicketLink(tickets: string, link?: string) {
-  if (link === undefined) {
-    return tickets;
+function formatTicketLink(status: GigStatus, url?: string) {
+  const replaceUnderscore = status.replace("_", " ");
+  const formattedStatus =
+    replaceUnderscore.charAt(0).toUpperCase() + replaceUnderscore.slice(1);
+
+  if (url === undefined) {
+    return formattedStatus;
   } else {
-    return <Link href={link}>{tickets}</Link>;
+    return (
+      <Link
+        href={url}
+        target="_blank"
+        className={
+          status === "buy_now"
+            ? "inline-block transition-all hover:scale-110 hover:text-yellow active:scale-95"
+            : ""
+        }
+      >
+        {formattedStatus}
+      </Link>
+    );
   }
 }
 
-const Gigs = () => {
+type GigsProps = {
+  gigs: Gig[];
+};
+
+const Gigs = ({ gigs }: GigsProps) => {
+  const [nextGig, setNextGig] = useState<Gig | null>(null);
+  useEffect(() => {
+    const nextGig = gigs.find((gig) => {
+      return gig.date && new Date(gig.date) > new Date();
+    });
+    setNextGig(nextGig ?? null);
+  }, [gigs]);
+
+  nextGig;
+
+  useEffect;
   return (
     <section id="gigs" className="relative z-10">
-      <GigsNext />
+      {nextGig !== null ? <GigsNext nextGig={nextGig} /> : null}
       <div className="bg-purple">
         <div className="container py-12">
           <div className="bg-purple-dark px-16 py-12">
@@ -40,27 +72,31 @@ const Gigs = () => {
                 </tr>
               </thead>
               <tbody>
-                {upcomingGigs.map((gig) => (
-                  <tr key={gig.id}>
+                {gigs.map((gig) => (
+                  <tr key={gig._id}>
                     <td className="py-5 pr-4 font-bold">
                       {gig.location}
                       <p className="text-sm font-normal text-white sm:hidden">
-                        {formatDateString(gig.date)}
+                        {formatDateString(
+                          gig.date ? new Date(gig.date) : undefined,
+                        )}
                       </p>
                     </td>
                     <td className="hidden py-5 pr-4 sm:block">
-                      {formatDateString(gig.date)}
+                      {formatDateString(
+                        gig.date ? new Date(gig.date) : undefined,
+                      )}
                     </td>
                     <td
                       className={clsx(
                         "py-5 pr-4",
-                        gig.tickets === "Sold out" &&
+                        gig.tickets_status === "sold_out" &&
                           "font-bold uppercase text-red",
-                        gig.tickets === "Buy now" &&
+                        gig.tickets_status === "buy_now" &&
                           "font-bold uppercase text-green-light",
                       )}
                     >
-                      {formatTicketLink(gig.tickets, gig.tickets_link)}
+                      {formatTicketLink(gig.tickets_status, gig.tickets_url)}
                     </td>
                   </tr>
                 ))}
