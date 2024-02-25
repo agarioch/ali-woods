@@ -1,10 +1,8 @@
-import { createClient, type ClientConfig } from "@sanity/client";
+import { createClient, type ClientConfig } from "next-sanity";
 
 const projectId = process.env.SANITY_PROJECT_ID;
 const dataset = process.env.SANITY_DATASET;
 const apiVersion = process.env.SANITY_API_VERSION;
-
-console.log({ projectId, dataset, apiVersion });
 
 const config: ClientConfig = {
   projectId: projectId,
