@@ -59,13 +59,22 @@ export const YouTubeIcon = () => {
 const SocialIcons = () => {
   return (
     <>
-      <LinkIcon href="https://www.instagram.com/aliwoodsgigs/">
+      <LinkIcon
+        href="https://www.instagram.com/aliwoodsgigs/"
+        aria-label="Visit Ali's Instagram"
+      >
         <InstagramIcon />
       </LinkIcon>
-      <LinkIcon href="https://www.tiktok.com/@aliwoodsgigs">
+      <LinkIcon
+        href="https://www.tiktok.com/@aliwoodsgigs"
+        aria-label="Visit Ali's TikTok"
+      >
         <TikTokIcon />
       </LinkIcon>
-      <LinkIcon href="https://www.youtube.com/channel/UCY2iqL9YBviFz1jwgJP-x8g">
+      <LinkIcon
+        href="https://www.youtube.com/channel/UCY2iqL9YBviFz1jwgJP-x8g"
+        aria-label="Visit Ali's YouTube"
+      >
         <YouTubeIcon />
       </LinkIcon>
     </>
