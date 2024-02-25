@@ -1,26 +1,28 @@
 import { useState } from "react";
 import VideoPlayer from "./videos.player";
-import videoLinks from "./video.links";
-import VideoLink from "./video.link";
+import VideoLink from "./videos.link";
+import { Video } from "@/types";
 
-const Videos = () => {
-  const [id, setId] = useState(videoLinks[0].id);
-  const [title, setTitle] = useState("Ali Woods Stand Up");
+type VideosProps = {
+  videos: Video[];
+};
+
+const Videos = ({ videos }: VideosProps) => {
+  const [id, setId] = useState(videos[0].youtube_id);
   return (
     <section className="bg-yellow py-16" id="videos">
       <div className="container">
         <h2 className="text-heading text-gray-dark">Videos</h2>
         <div className="mt-10 flex flex-col items-start gap-3 xl:flex-row">
-          <VideoPlayer id={id} title={title} />
+          <VideoPlayer id={id} />
           <div className="flex w-full flex-col overflow-y-auto xl:max-w-[400px]">
-            {videoLinks.map((video, index) => (
+            {videos.map((video) => (
               <VideoLink
-                key={index}
-                isPlaying={id === video.id}
+                key={video._id}
+                isPlaying={id === video.youtube_id}
                 {...video}
                 onClick={() => {
-                  setId(video.id);
-                  setTitle(video.title);
+                  setId(video.youtube_id);
                 }}
               />
             ))}

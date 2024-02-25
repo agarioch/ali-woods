@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import { VideoLink } from "./video.links";
 
-export type VideoLinkProps = Omit<VideoLink, "src"> & {
+export type VideoLinkProps = {
+  title: string;
+  description: string;
   onClick: () => void;
   isPlaying?: boolean;
 };
@@ -9,7 +10,7 @@ export type VideoLinkProps = Omit<VideoLink, "src"> & {
 const VideoLink = ({
   title,
   isPlaying = false,
-  desc,
+  description,
   onClick,
 }: VideoLinkProps) => {
   return (
@@ -27,7 +28,7 @@ const VideoLink = ({
       <div className="flex items-center justify-between gap-4 border-b border-b-yellow-dark px-5 py-4">
         <div>
           <p className="font-bold uppercase">{title}</p>
-          <p className="line-clamp-2 sm:line-clamp-1">{desc}</p>
+          <p className="line-clamp-2 sm:line-clamp-1">{description}</p>
         </div>
         <div
           className={clsx(

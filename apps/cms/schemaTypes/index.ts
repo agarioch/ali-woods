@@ -57,4 +57,33 @@ const Gig = defineType({
   },
 })
 
-export const schemaTypes = [Gig]
+const Video = defineType({
+  name: 'video',
+  title: 'Video',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Title',
+      description: 'Recommend title length < 40 characters',
+      type: 'string',
+      validation: (rule) => rule.required().max(100),
+    }),
+    defineField({
+      name: 'youtube_id',
+      title: 'YouTube ID',
+      description: 'YouTube video ID e.g. dQw4w9WgXcQ',
+      type: 'string',
+      validation: (rule) => rule.required().length(11),
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      description: 'Recommend description length < 40 characters',
+      type: 'string',
+      validation: (rule) => rule.required().max(100),
+    }),
+  ],
+})
+
+export const schemaTypes = [Gig, Video]

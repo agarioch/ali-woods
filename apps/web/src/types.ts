@@ -8,3 +8,11 @@ export type Gig = {
   tickets_status: GigStatus;
   tickets_url?: string;
 };
+
+export type Video = {
+  _id: string;
+  _type: "video";
+  title: string;
+  youtube_id: string;
+  description: string;
+};

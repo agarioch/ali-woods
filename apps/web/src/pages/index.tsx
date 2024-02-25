@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next";
-import client from "@/lib/sanity.client";
 import { NextSeo } from "next-seo";
 
 import About from "@/components/about";
@@ -8,8 +7,8 @@ import Hero from "@/components/hero";
 import Newsletter from "@/components/newsletter";
 import Press from "@/components/press";
 import Videos from "@/components/videos";
-import { Gig } from "@/types";
-import { getGigs } from "@/lib/sanity.queries";
+import { Gig, Video } from "@/types";
+import { getHomeProps } from "@/lib/sanity.queries";
 
 const pageDescription =
   "Ali Woods is an award winning stand-up comedian, podcaster, content-creator and ginger. View upcoming gigs, videos and exclusive content.";
@@ -35,17 +34,18 @@ const HomeSeo = () => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const gigs = await getGigs();
+  const props = await getHomeProps();
   return {
-    props: { gigs },
+    props,
   };
 };
 
 type HomeProps = {
   gigs: Gig[];
+  videos: Video[];
 };
 
-export default function Home({ gigs }: HomeProps) {
+export default function Home({ gigs, videos }: HomeProps) {
   return (
     <>
       <HomeSeo />
@@ -54,7 +54,7 @@ export default function Home({ gigs }: HomeProps) {
       <Newsletter />
       <About />
       <Press />
-      <Videos />
+      <Videos videos={videos} />
     </>
   );
 }
