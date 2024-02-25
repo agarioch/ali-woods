@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", ".sanity/**"]
+      "outputs": [".next/**", "!.next/cache/**", ".sanity/**", "dist/**"]
     },
     "deploy": {
       "dependsOn": ["build", "test", "lint"]
@@ -15,7 +15,7 @@
     "lint": {},
     "start": {
       "dependsOn": ["build"],
-      "inputs": [".next/**", "!.next/cache/**"]
+      "inputs": [".next/**", "!.next/cache/**", ".sanity/**", "dist/**"]
     },
     "dev": {
       "cache": false,
