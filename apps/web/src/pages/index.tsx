@@ -55,7 +55,6 @@ export default function Home({ gigs }: HomeProps) {
       <About />
       <Press />
       <Videos />
-      <pre>{JSON.stringify({ gigs }, null, 2)}</pre>
     </>
   );
 }
