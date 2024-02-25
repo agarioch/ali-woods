@@ -12,8 +12,12 @@ type StaleRoutesByType = {
   [key: string]: string[];
 };
 
+/**
+ * Define the routes that should be revalidated when a document of a certain type is published
+ */
 const staleRoutesByType: StaleRoutesByType = {
   gig: ["/"],
+  video: ["/"],
 };
 
 async function readBody(readable: any) {
@@ -58,6 +62,12 @@ export default async function revalidate(
   }
 
   const staleRoutes = staleRoutesByType[_type];
+
+  if (!staleRoutes) {
+    const noRoutes = `No routes defined for type ${_type}`;
+    console.log(noRoutes, true);
+    return res.status(400).json({ message: noRoutes });
+  }
 
   try {
     await Promise.all(staleRoutes.map((route) => res.revalidate(route)));
