@@ -1,0 +1,19 @@
+{
+  "name": "ali-woods",
+  "version": "0.1.0",
+  "description": "Ail Woods website monorepo",
+  "author": "alistair@garioch.dev",
+  "license": "ISC",
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "turbo": "^1.12.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
