@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { endOfDay, format, isBefore, sub } from "date-fns";
 import Link from "next/link";
 import clsx from "clsx";
 import GigsNext from "./gigs.next";
@@ -6,8 +6,10 @@ import { Gig, GigStatus } from "@/types";
 import { useEffect, useState } from "react";
 
 function formatDateString(date: Date | undefined) {
-  return date === undefined ? "TBA" : format(date, "MM/dd/yy");
+  return date === undefined ? "TBA" : format(date, "dd/MM/yy");
 }
+
+const yesterday = endOfDay(sub(new Date(), { days: 1 }));
 
 function formatTicketLink(status: GigStatus, url?: string) {
   const replaceUnderscore = status.replace("_", " ");
@@ -46,9 +48,6 @@ const Gigs = ({ gigs }: GigsProps) => {
     setNextGig(nextGig ?? null);
   }, [gigs]);
 
-  nextGig;
-
-  useEffect;
   return (
     <section id="gigs" className="relative z-10">
       {nextGig !== null ? <GigsNext nextGig={nextGig} /> : null}
@@ -87,17 +86,21 @@ const Gigs = ({ gigs }: GigsProps) => {
                         gig.date ? new Date(gig.date) : undefined,
                       )}
                     </td>
-                    <td
-                      className={clsx(
-                        "py-5 pr-4",
-                        gig.tickets_status === "sold_out" &&
-                          "font-bold uppercase text-red",
-                        gig.tickets_status === "buy_now" &&
-                          "font-bold uppercase text-green-light",
-                      )}
-                    >
-                      {formatTicketLink(gig.tickets_status, gig.tickets_url)}
-                    </td>
+                    {gig.date && isBefore(gig.date, yesterday) ? (
+                      <td className="py-5 pr-4">Finished</td>
+                    ) : (
+                      <td
+                        className={clsx(
+                          "py-5 pr-4",
+                          gig.tickets_status === "sold_out" &&
+                            "font-bold uppercase text-red",
+                          gig.tickets_status === "buy_now" &&
+                            "font-bold uppercase text-green-light",
+                        )}
+                      >
+                        {formatTicketLink(gig.tickets_status, gig.tickets_url)}
+                      </td>
+                    )}
                   </tr>
                 ))}
               </tbody>
