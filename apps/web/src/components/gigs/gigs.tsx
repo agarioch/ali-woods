@@ -87,7 +87,7 @@ const Gigs = ({ gigs }: GigsProps) => {
                       )}
                     </td>
                     {gig.date && isBefore(gig.date, yesterday) ? (
-                      <td className="py-5 pr-4">Finished</td>
+                      <td className="py-5 pr-4">{`Past event`}</td>
                     ) : (
                       <td
                         className={clsx(
