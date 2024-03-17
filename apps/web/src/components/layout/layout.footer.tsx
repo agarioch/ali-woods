@@ -22,10 +22,22 @@ const LayoutFooter = () => {
           <div className="flex gap-16 fill-red sm:justify-end ">
             <SocialIcons />
           </div>
-          <div className="sm:text-end">
+          <div className="flex flex-col gap-2 sm:text-end">
             <p className="font-bold">Contact</p>
             <LinkAnchor href="https://gagreflex.co.uk/acts/ali-woods/">
-              Booking Equiries
+              Booking Enquiries
+            </LinkAnchor>
+            <LinkAnchor href="mailto:georgi@gagreflex.co.uk">
+              Live bookings
+            </LinkAnchor>
+            <LinkAnchor href="mailto:elena@themillaragency.com">
+              Social Media Partnerships
+            </LinkAnchor>
+            <LinkAnchor href="mailto:hannah@gagreflex.co.uk">
+              Corporate bookings
+            </LinkAnchor>
+            <LinkAnchor href="mailto:lawrence@thegaltonagency.com">
+              Acting & Commercial Work
             </LinkAnchor>
           </div>
         </div>
