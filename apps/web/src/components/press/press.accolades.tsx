@@ -18,10 +18,10 @@ const Accolades = () => {
             <div className="top-[65%] bg-gray-dark p-6 lg:absolute lg:right-[10%] lg:w-[110%] lg:pb-6 lg:pl-16 lg:pr-4 lg:pt-16 xl:right-[20%] xl:w-[80%]">
               <div className="relative">
                 <Image
-                  src="/images/press/evening-standard-logo.png"
-                  alt="Evening Standard"
-                  width={268}
-                  height={32}
+                  src="/images/press/the-wee-review-logo.png"
+                  alt="The Wee Review"
+                  width={143}
+                  height={72}
                   className="relative z-10"
                 />
                 <div className="absolute -left-8 bottom-3/4">
@@ -40,10 +40,9 @@ const Accolades = () => {
                 </div>
               </div>
               <p className="my-3 text-balance">
-                {`His riffs about James Bond, erectile dysfunction and his Scottish mother were accessible yet distinctive.
-                In a world of wannabes, Woods is the real deal.`}
+                {`Expect to see big things from this rising star.`}
               </p>
-              <p className="text-base text-yellow">{`John Smith, Tea Marker at Men's Health`}</p>
+              <p className="text-base text-yellow">{`Hazel Adie, The Wee Review`}</p>
             </div>
           </div>
         </div>
