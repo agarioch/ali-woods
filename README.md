@@ -5,6 +5,12 @@ This monorepo contains the website and content management system UI for [aliwood
 - `apps/web` - Nextjs web application, used to render webpages
 - `apps/cms` - Sanity Studio UI, used to manage content in Sanity.io
 
+## Admin Linkts
+- [Vercel](https://vercel.io) - Manage Website and CMS Studio deployment
+- [Sanity](https://www.sanity.io/manage/) - Manage CMS Project
+
+
+
 ## Key Technologies
 - [Nextjs](https://nextjs.org) - Website framework
 - [Sanity](https://www.sanity.io/) - Content Management System
@@ -69,11 +75,12 @@ git push origin main
 ## Future Improvements
 With additional time the following improvements could be made to this project:
 
-**CMS**
+**Content**
  - [ ] Allow content admins to order video
  - [ ] Allow content admins to update copy
  - [ ] Allow content admins to update SEO metadata
  - [ ] Allow content admins to create and edit new pages e.g. blogposts or about
+ - [ ] Replace email capture with newsletter service
 
  **Website**
  - [ ] Add modern format images to improve page loading speed

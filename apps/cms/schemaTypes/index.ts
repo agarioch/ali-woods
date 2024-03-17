@@ -86,4 +86,18 @@ const Video = defineType({
   ],
 })
 
-export const schemaTypes = [Gig, Video]
+const Subscribers = defineType({
+  name: 'subscribers',
+  title: 'Newsletter Subscribers',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+      validation: (rule) => rule.required().email(),
+    }),
+  ],
+})
+
+export const schemaTypes = [Gig, Video, Subscribers]
