@@ -51,8 +51,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      heading: ["Rubik", "sans-serif"],
-      body: ["Rubik", "sans-serif"],
+      heading: ["var(--font-rubik)", "sans-serif"],
+      body: ["var(--font-rubik)", "sans-serif"],
     },
     extend: {
       backgroundImage: {

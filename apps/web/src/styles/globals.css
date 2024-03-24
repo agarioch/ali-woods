@@ -39,16 +39,15 @@ h3,
 h4,
 h5,
 h6,
-.heading
-{
-  @apply font-heading font-bold uppercase italic text-yellow leading-snug;
+.heading {
+  @apply font-heading font-extrabold uppercase italic leading-snug text-yellow;
 }
 
 th {
   text-align: start;
 }
 
-.copy p:not(:last-child){
+.copy p:not(:last-child) {
   @apply mb-5;
 }
 

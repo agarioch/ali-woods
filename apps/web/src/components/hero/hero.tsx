@@ -31,12 +31,12 @@ const Hero = () => {
             className="pointer-events-none max-w-full md:-mb-12 md:max-w-xl md:-translate-y-12 lg:max-w-3xl xl:max-w-4xl"
           />
           <div className="absolute left-3/4 top-1/4 ml-[5vw] hidden w-max font-heading md:block">
-            <p className="text-3xl italic lg:text-4xl xl:text-5xl">
-              {"In a world of wannabes,"}
+            <p className="text-3xl font-bold italic lg:text-4xl  xl:text-5xl">
+              {`"In a world of wannabes,`}
               <br />
-              {"Woods is the real deal"}
+              {`Woods is the real deal"`}
             </p>
-            <p className="mt-4 text-yellow-light lg:text-xl">
+            <p className="mt-4 font-medium text-yellow lg:text-xl">
               Evening Standard
             </p>
           </div>

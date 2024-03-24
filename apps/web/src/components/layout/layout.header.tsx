@@ -24,7 +24,7 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
         <Link href="/">
           <h1 className="text-4xl">Ali Woods</h1>
         </Link>
-        <div className="flex min-w-fit max-w-xl basis-1/3 justify-between gap-8 text-xl sm:gap-16 xl:text-2xl">
+        <div className="flex min-w-fit max-w-xl basis-1/3 justify-between gap-8 text-xl font-medium sm:gap-16 xl:text-2xl">
           <LinkAnchor hasUnderline={false} href="/#gigs">
             Live Shows
           </LinkAnchor>

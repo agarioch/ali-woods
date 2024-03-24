@@ -8,8 +8,8 @@ This monorepo contains the website and content management system UI for [aliwood
 ## Admin Linkts
 - [Vercel](https://vercel.io) - Manage Website and CMS Studio deployment
 - [Sanity](https://www.sanity.io/manage/) - Manage CMS Project
-
-
+- [Sanity Studio](https://ali-woods-cms.vercel.app/) - Manage Content
+- [Google Analytics](https://analytics.google.com/analytics/web/?authuser=1#/p428985150/) - View usage statistics
 
 ## Key Technologies
 - [Nextjs](https://nextjs.org) - Website framework
@@ -85,7 +85,6 @@ With additional time the following improvements could be made to this project:
  **Website**
  - [ ] Add modern format images to improve page loading speed
  - [ ] Replace hero background png with svg pattern to improve loading speed and allow animation
- - [ ] Add Social images for Twitter, Insta and X sharing
 
 ## Codeowners
 This project was created by [Alistair Garioch](https://github.com/agarioch). 

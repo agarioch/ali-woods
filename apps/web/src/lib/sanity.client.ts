@@ -5,8 +5,6 @@ const dataset = process.env.SANITY_DATASET;
 const apiVersion = process.env.SANITY_API_VERSION;
 const token = process.env.SANITY_API_TOKEN;
 
-console.log({ projectId, dataset, apiVersion, token });
-
 const config: ClientConfig = {
   projectId: projectId,
   dataset: dataset,
