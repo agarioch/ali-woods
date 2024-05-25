@@ -51,11 +51,11 @@ const Gigs = ({ gigs }: GigsProps) => {
   return (
     <section id="gigs" className="relative z-10">
       {nextGig !== null ? <GigsNext nextGig={nextGig} /> : null}
-      <div className="bg-purple">
-        <div className="container py-12">
-          <div className="bg-purple-dark px-16 py-12">
+      <div className="container">
+        <div className="border-black my-12 border-4">
+          <div className="bg-blue border-black border-b-4 px-16 py-12">
             <h2 className="text-heading">2024 Gigs</h2>
-            <p className="max-w-prose pt-8 text-copy">
+            <p className="max-w-prose pt-8 text-copy text-white">
               {`Stay in the loop with Ali's upcoming performances. Check out the
               list below for details on where you can catch the next wave of
               hilarity, complete with venue information and ticket availability.`}
@@ -63,8 +63,8 @@ const Gigs = ({ gigs }: GigsProps) => {
           </div>
           <div className="overflow-x-auto bg-purple-light px-4 py-12 sm:px-16">
             <table className="w-full table-auto border-collapse sm:text-copy">
-              <thead className="heading text-heading">
-                <tr>
+              <thead className="heading text-heading ">
+                <tr className="text-green">
                   <th className="pr-4">Location</th>
                   <th className="hidden pr-4 sm:block">Date</th>
                   <th className="pr-4">Tickets</th>
@@ -73,7 +73,7 @@ const Gigs = ({ gigs }: GigsProps) => {
               <tbody>
                 {gigs.map((gig) => (
                   <tr key={gig._id}>
-                    <td className="py-5 pr-4 font-bold">
+                    <td className="py-5 pr-4">
                       {gig.location}
                       <p className="text-sm font-normal text-white sm:hidden">
                         {formatDateString(
@@ -93,9 +93,9 @@ const Gigs = ({ gigs }: GigsProps) => {
                         className={clsx(
                           "py-5 pr-4",
                           gig.tickets_status === "sold_out" &&
-                            "font-bold uppercase text-red",
+                            "text-orange font-bold uppercase",
                           gig.tickets_status === "buy_now" &&
-                            "font-bold uppercase text-green-light",
+                            "text-blue font-bold uppercase",
                         )}
                       >
                         {formatTicketLink(gig.tickets_status, gig.tickets_url)}

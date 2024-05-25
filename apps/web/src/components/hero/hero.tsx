@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="container mt-52">
       <div className="relative">
-        <section className="border-black relative z-10  flex flex-col items-center justify-between border-4 bg-white px-20 py-10 shadow-md sm:flex-row">
+        <section className="border-black relative z-10 flex flex-col items-center justify-between border-4 bg-white px-20 py-10 shadow-md sm:flex-row">
           <div className="w-max font-heading md:block">
             <p className="text-3xl font-bold lg:text-4xl  xl:text-5xl">
               {`"In a world of wannabes,`}
