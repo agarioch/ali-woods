@@ -23,7 +23,7 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
       height: 115,
     },
     scrolled: {
-      height: 60,
+      height: 50,
     },
   };
 
@@ -43,13 +43,16 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
     <motion.header
       animate={isScrolled ? "scrolled" : "top"}
       className={clsx(
-        "bg-off-white sticky top-0 z-50 py-3",
+        "bg-off-white fixed top-0 z-50 w-full py-3",
         isScrolled ? "shadow-md" : "shadow-none",
       )}
     >
       <nav className="container flex flex-wrap items-baseline justify-between gap-3">
         <Link href="/">
-          <motion.div variants={heightVariants} className="relative w-[581px]">
+          <motion.div
+            variants={heightVariants}
+            className="relative w-72 sm:w-[581px]"
+          >
             <MotionImage
               src="/images/ali-woods-logo.svg"
               alt="Ali Woods"
@@ -57,7 +60,7 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
               fill
               objectPosition="left"
               transition={{ type: "spring" }}
-              className="origin-left"
+              className="origin-left sm:max-w-full"
               variants={imageVariants}
             />
           </motion.div>
