@@ -8,7 +8,7 @@ type GigsNextProps = {
 
 const GigsNext = ({ nextGig }: GigsNextProps) => {
   return (
-    <div className="border-black mt-20 border-4 bg-yellow py-4 text-copy font-bold">
+    <div className="border-black mt-20 border-y-4 bg-yellow py-4 text-copy font-bold">
       <div className="container flex items-baseline justify-between text-xl md:text-3xl">
         <div className="">
           <h3 className="text-black inline-block font-bold uppercase">
