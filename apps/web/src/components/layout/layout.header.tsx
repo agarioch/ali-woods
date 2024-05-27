@@ -1,8 +1,11 @@
 import { type HTMLAttributes, useState } from "react";
 import Link from "next/link";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import Image from "next/image";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import clsx from "clsx";
 import { LinkAnchor } from "../common";
+
+const MotionImage = motion(Image);
 
 const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
   const { scrollY } = useScroll();
@@ -12,19 +15,57 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
     setIsScrolled(y > 0);
   });
 
+  const heightVariants = {
+    initial: {
+      height: 115,
+    },
+    top: {
+      height: 115,
+    },
+    scrolled: {
+      height: 50,
+    },
+  };
+
+  const imageVariants = {
+    initial: {
+      scaleX: 1,
+    },
+    top: {
+      scaleX: 1,
+    },
+    scrolled: {
+      scaleX: 1.2,
+    },
+  };
+
   return (
-    <header
+    <motion.header
+      animate={isScrolled ? "scrolled" : "top"}
       className={clsx(
-        "bg-gray-dark py-3",
-        isScrolled ? "sticky top-0 z-50" : "",
+        "bg-off-white fixed top-0 z-50 w-full py-3",
+        isScrolled ? "shadow-md" : "shadow-none",
       )}
-      {...props}
     >
       <nav className="container flex flex-wrap items-baseline justify-between gap-3">
         <Link href="/">
-          <h1 className="text-4xl">Ali Woods</h1>
+          <motion.div
+            variants={heightVariants}
+            className="relative w-72 sm:w-[581px]"
+          >
+            <MotionImage
+              src="/images/ali-woods-logo.svg"
+              alt="Ali Woods"
+              objectFit="contain"
+              fill
+              objectPosition="left"
+              transition={{ type: "spring" }}
+              className="origin-left sm:max-w-full"
+              variants={imageVariants}
+            />
+          </motion.div>
         </Link>
-        <div className="flex min-w-fit max-w-xl basis-1/3 justify-between gap-8 text-xl font-medium sm:gap-16 xl:text-2xl">
+        <div className="xl:text-2xls flex min-w-fit max-w-xl basis-1/3 justify-between gap-8 text-xl font-bold sm:gap-16">
           <LinkAnchor hasUnderline={false} href="/#gigs">
             Live Shows
           </LinkAnchor>
@@ -37,7 +78,7 @@ const LayoutHeader = (props: HTMLAttributes<HTMLDivElement>) => {
         </div>
         {props.children}
       </nav>
-    </header>
+    </motion.header>
   );
 };
 

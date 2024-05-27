@@ -10,12 +10,12 @@ type VideosProps = {
 const Videos = ({ videos }: VideosProps) => {
   const [id, setId] = useState(videos[0].youtube_id);
   return (
-    <section className="bg-yellow py-16" id="videos">
+    <section className="bg-off-white py-16" id="videos">
       <div className="container">
-        <h2 className="text-heading text-gray-dark">Videos</h2>
+        <h2 className="text-black text-heading">Videos</h2>
         <div className="mt-10 flex flex-col items-start gap-3 xl:flex-row">
           <VideoPlayer id={id} />
-          <div className="flex w-full flex-col overflow-y-auto xl:max-w-[400px]">
+          <div className="flex w-full flex-col gap-4 overflow-y-auto xl:max-w-[400px]">
             {videos.map((video) => (
               <VideoLink
                 key={video._id}

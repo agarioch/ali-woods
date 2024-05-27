@@ -9,36 +9,15 @@ const config: Config = {
   theme: {
     colors: {
       transparent: "transparent",
-      gray: {
-        light: "#636363",
-        DEFAULT: "#434343",
-        dark: "#0A0A0A",
-      },
-      white: {
-        light: "#F8F8F8",
-        DEFAULT: "#CACACA",
-        dark: "#9E9E9E",
-      },
-      red: {
-        light: "#EA5285",
-        DEFAULT: "#E12A67",
-        dark: "#A71646",
-      },
-      green: {
-        light: "#51B8B0",
-        DEFAULT: "#27A097",
-        dark: "#12776F",
-      },
-      yellow: {
-        light: "#F6E55B",
-        DEFAULT: "#F3DD2E",
-        dark: "#AD9A00",
-      },
-      purple: {
-        light: "#482F64",
-        DEFAULT: "#3D2459",
-        dark: "#2C1348",
-      },
+      green: "#0FB59A",
+      blue: "#146EFD",
+      pink: "#FFB2D8",
+      yellow: "#FDD003",
+      orange: "#F87A01",
+      black: "#000",
+      white: "#fff",
+      gray: "#6B6B6B",
+      "off-white": "#F3F3F3",
     },
     container: {
       center: true,

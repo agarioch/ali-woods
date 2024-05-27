@@ -21,21 +21,28 @@ const VideoLink = ({
         }
       }}
       className={clsx(
-        "group bg-yellow text-start text-gray-dark transition-colors hover:bg-yellow-dark",
-        isPlaying && "cursor-auto bg-yellow-dark",
+        "group border-4  text-start transition-colors",
+        isPlaying ? "bg-blue cursor-auto" : "hover:bg-blue/10 bg-white",
       )}
     >
       <div className="flex items-center justify-between gap-4 border-b border-b-yellow-dark px-5 py-4">
         <div>
-          <p className="font-bold uppercase">{title}</p>
-          <p className="line-clamp-2 sm:line-clamp-1">{description}</p>
+          <p className={clsx("font-bold uppercase", isPlaying && "text-white")}>
+            {title}
+          </p>
+          <p
+            className={clsx(
+              "line-clamp-2 sm:line-clamp-1",
+              isPlaying ? "text-yellow" : "text-orange",
+            )}
+          >
+            {description}
+          </p>
         </div>
         <div
           className={clsx(
-            "flex aspect-square h-12 items-center justify-center bg-gray-dark",
-            isPlaying
-              ? "fill-yellow-dark"
-              : "fill-green p-2 group-hover:fill-green-light",
+            "bg-black flex aspect-square h-12 items-center justify-center",
+            isPlaying ? "fill-yellow" : "fill-orange",
           )}
         >
           <svg

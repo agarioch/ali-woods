@@ -3,34 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --gray-light: #636363;
-  --gray-mid: #434343;
-  --gray-dark: #0a0a0a;
-
-  --white-light: #f8f8f8;
-  --white-mid: #cacaca;
-  --white-dark: #9e9e9e;
-
-  --red-light: #ea5285;
-  --red-mid: #e12a67;
-  --red-dark: #a71646;
-
-  --green-light: #51b8b0;
-  --green-mid: #27a097;
-  --green-dark: #12776f;
-
-  --yellow-light: #f6e55b;
-  --yellow-mid: #f3dd2e;
-  --yellow-dark: #ad9a00;
-
-  --purple-light: #482f64;
-  --purple-mid: #3d2459;
-  --purple-dark: #2c1348;
+  --green: #0fb59a;
+  --blue: #146efd;
+  --pink: #ffb2d8;
+  --yellow: #fdd003;
+  --orange: #f87a01;
+  --black: #000;
+  --white: #fff;
+  --gray: #6b6b6b;
+  --gray-dark: #1a1a1a;
+  --off-white: #f3f3f3;
 }
 
 body {
-  color: var(--white-light);
-  background: var(--gray-dark);
+  color: var(--black);
+  background: var(--off-white);
 }
 
 h1,
@@ -40,7 +27,7 @@ h4,
 h5,
 h6,
 .heading {
-  @apply font-heading font-extrabold uppercase italic leading-snug text-yellow;
+  @apply font-heading text-3xl font-bold uppercase text-yellow;
 }
 
 th {

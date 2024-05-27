@@ -2,11 +2,20 @@ import { LinkAnchor, SocialIcons } from "../common";
 
 const LayoutFooter = () => {
   return (
-    <footer className="bg-gray-dark text-white-light">
+    <footer className="bg-black text-white">
       <div className="container grid grid-cols-1 gap-12 py-16 sm:grid-cols-2">
         {/* Name & Links */}
         <div className="flex h-full flex-col justify-between gap-8">
-          <h2 className="text-heading text-red">Ali Woods</h2>
+          <h2 className="text-heading">
+            <span className="text-green">A</span>
+            <span className="text-blue">L</span>
+            <span className="text-pink">I </span>
+            <span className="text-yellow">W</span>
+            <span className="text-orange">O</span>
+            <span className="text-green">O</span>
+            <span className="text-pink">D</span>
+            <span className="text-blue">S</span>
+          </h2>
           <LinkAnchor hasUnderline={false} href="/#gigs">
             Live Shows
           </LinkAnchor>
@@ -19,7 +28,7 @@ const LayoutFooter = () => {
         </div>
         {/* Contact */}
         <div className="flex flex-col justify-between gap-8">
-          <div className="flex gap-16 fill-red sm:justify-end ">
+          <div className="fill-orange flex gap-16 sm:justify-end ">
             <SocialIcons />
           </div>
           <div className="flex flex-col gap-2 sm:text-end">
