@@ -21,8 +21,8 @@ const VideoLink = ({
         }
       }}
       className={clsx(
-        "group border-4 bg-white text-start text-gray-dark transition-colors",
-        isPlaying ? "bg-blue cursor-auto" : "hover:bg-blue/10",
+        "group border-4  text-start transition-colors",
+        isPlaying ? "bg-blue cursor-auto" : "hover:bg-blue/10 bg-white",
       )}
     >
       <div className="flex items-center justify-between gap-4 border-b border-b-yellow-dark px-5 py-4">
@@ -41,7 +41,7 @@ const VideoLink = ({
         </div>
         <div
           className={clsx(
-            "flex aspect-square h-12 items-center justify-center bg-gray-dark",
+            "bg-black flex aspect-square h-12 items-center justify-center",
             isPlaying ? "fill-yellow" : "fill-orange",
           )}
         >
