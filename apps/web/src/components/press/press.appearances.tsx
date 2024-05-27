@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Appearances = () => {
   return (
-    <div className="overflow-x-auto bg-white-light py-8 text-copy text-gray-dark">
+    <div className="overflow-x-auto border-y-4 bg-white-light py-8 text-copy">
       <div className="container flex items-center justify-between gap-8 [&>img]:shrink-0">
         <Image
           src="/images/press/comedy-central-logo.png"

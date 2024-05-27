@@ -17,7 +17,7 @@ const LinkAnchor = ({
     <Link
       href={href}
       className={clsx(
-        "decoration-white-light decoration-2 transition-colors hover:text-yellow-light",
+        "decoration-white decoration-2 transition-colors hover:decoration-yellow",
         hasUnderline && "underline",
       )}
       target={href.startsWith("http") ? "_blank" : undefined}
