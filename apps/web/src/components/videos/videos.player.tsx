@@ -3,7 +3,7 @@ const VideoPlayer = ({ id }: { id: string }) => {
     <iframe
       width="100%"
       height="100%"
-      className="aspect-video"
+      className="aspect-video border-4"
       src={`https://www.youtube-nocookie.com/embed/${id}`}
       title="Ali Woods Standup"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"

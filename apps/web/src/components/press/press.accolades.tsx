@@ -34,7 +34,7 @@ const boxVariants = {
 const Accolades = () => {
   return (
     <div className="bg-orange border-y-4">
-      <div className="container flex flex-col-reverse items-center gap-6 pb-40 pt-20 text-copy lg:flex-row lg:gap-20 lg:pb-28 xl:gap-28">
+      <div className="lg:pb-38 container flex flex-col-reverse items-center gap-6 pb-40 pt-20 text-copy lg:flex-row lg:gap-20 xl:gap-28">
         <motion.div
           className="relative"
           initial="initial"
