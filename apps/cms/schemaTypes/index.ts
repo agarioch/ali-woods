@@ -83,6 +83,12 @@ const Video = defineType({
       type: 'string',
       validation: (rule) => rule.required().max(100),
     }),
+    defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'datetime',
+      description: 'Date and time of video publish',
+    }),
   ],
 })
 
