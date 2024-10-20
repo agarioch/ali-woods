@@ -15,4 +15,5 @@ export type Video = {
   title: string;
   youtube_id: string;
   description: string;
+  date?: string;
 };
